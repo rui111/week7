@@ -1,0 +1,46 @@
+<html>
+
+<head>
+        <head>
+                <link rel="stylesheet" type="text/css" href="styles.css">
+              </head>
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       
+  
+    </br>
+    <h3>The available tasks are:
+        <table id="B01">
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>level</td>
+                <td>Address</td>
+         
+            </tr>
+            <% for ( var i =0; i< mycustomers.length;i++){ %>
+                <tr>
+                        <td>
+                                <%= mycustomers[i]._id %>
+                            </td>
+                    <td>
+                        <%= mycustomers[i].Name %>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].Level%>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].Address%>
+                    </td>
+                   
+                   
+                </tr>
+                <% }%>
+    </h3>
+
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+
+<head>
+        <head>
+                <link rel="stylesheet" type="text/css" href="styles.css">
+              </head>
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       
+  
+    </br>
+    <h3>The available tasks are:
+        <table id="B01">
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>assign to</td>
+                <td>due</td>
+                <td>des</td>
+                <td>status</td>           
+            </tr>
+            <% for ( var i =0; i< mycustomers.length;i++){ %>
+                <tr>
+                        <td>
+                                <%= mycustomers[i]._id %>
+                            </td>
+                    <td>
+                        <%= mycustomers[i].TaskName %>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].DueDate%>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].TaskStatus%>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].TaskDescription%>
+                    </td>
+                   
+                </tr>
+                <% }%>
+    </h3>
+
+
+    
+    
+</body>
+<form action="/deletebyid" method="POST">
+    <table>
+<tr>
+    <td>Task id:</td>
+   <td> <input type="text" name="id" /></td>
+ </tr> 
+ 
+</table>
+    <button>Submit</button>
+</form></br>
+
+<form action="/up" method="POST">
+    <table>
+        <tr>
+            <td>Task id:</td>
+           <td> <input type="text" name="id" /></td>
+         </tr> >
+ <tr>
+
+    <td>  Status:</td>
+    <td>
+    <select name="status">
+        <option value="completed" >Completed</option>
+        <option value="inProcess" >InPrcess</option>
+        
+      </select></td>
+      
+   </tr>
+</table>
+    <button>Submit</button>
+</form>
+</br>
+</html>
